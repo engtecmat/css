@@ -1,0 +1,49 @@
+/* Hide the checkbox from view but keep it accessible */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Style the label to look like a button or link */
+label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+label:hover {
+    background-color: #0056b3;
+}
+
+/* --- The Magic --- */
+
+/* By default, show div one and hide div two */
+#one {
+    background-color: lightgoldenrodyellow;
+    display: block;
+}
+
+#two {
+    display: none;
+}
+
+/* When the checkbox is checked, hide div one */
+#toggle:checked ~ #one {
+    background-color: lightgoldenrodyellow;
+}
+
+/* When the checkbox is checked, show div two */
+#toggle:checked ~ #one {
+    background-color: black;
+    color: white;
+}
