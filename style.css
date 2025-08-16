@@ -1,4 +1,22 @@
-/* Hide the checkbox from view but keep it accessible */
+#container {
+    border: 1px solid black;
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+}
+
+#toolbar-cover, #toolbar {
+    height: 50px;
+}
+
+#toolbar-cover:hover div {
+    display: block;
+}
+
+#toolbar {
+    display: none;
+    border-bottom: 1px solid black;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -14,7 +32,7 @@
 label {
     display: inline-block;
     padding: 8px 15px;
-    background-color: #007bff;
+    /*background-color: #007bff;*/
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -22,28 +40,38 @@ label {
 }
 
 label:hover {
-    background-color: #0056b3;
+    /*background-color: #0056b3;*/
 }
 
-/* --- The Magic --- */
 
-/* By default, show div one and hide div two */
-#one {
-    background-color: lightgoldenrodyellow;
-    display: block;
-}
-
-#two {
+#toggle:checked ~ .dark {
     display: none;
 }
 
-/* When the checkbox is checked, hide div one */
-#toggle:checked ~ #one {
-    background-color: lightgoldenrodyellow;
+#toggle:checked ~ .light {
+    display: inline;
 }
 
 /* When the checkbox is checked, show div two */
-#toggle:checked ~ #one {
+#toggle:checked ~ #container {
     background-color: black;
     color: white;
+}
+
+#container:has(input[type="checkbox"]:checked) {
+    background-color: black;
+}
+
+#toolbar .light {
+    display: none;
+}
+
+
+#test-hover {
+    border: 1px solid black;
+}
+
+
+#test-hover div {
+    display: none;
 }
