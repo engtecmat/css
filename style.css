@@ -1,7 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 #container {
+    padding: 0;
     border: 1px solid black;
-    height: 100vh;
+    height: calc(100vh);
     background-color: lightgoldenrodyellow;
+    overflow: hidden;
 }
 
 #toolbar-cover, #toolbar {
@@ -17,15 +25,37 @@
     border-bottom: 1px solid black;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+#center {
+    height: calc(100% - 100px);
+    border: 1px solid red;
+}
+
+#center div {
+    float: left;
+    height: 100%;
+}
+
+#previous, #next {
+    width: 100px;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#content {
+    width: calc(100% - 200px);
+}
+
+#footer {
+    height: 50px;
+    border: 1px solid blue;
     padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    margin: auto;
+}
+
+input[type=checkbox] {
+    width: 0;
+    height: 0;
 }
 
 /* Style the label to look like a button or link */
