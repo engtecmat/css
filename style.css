@@ -48,9 +48,16 @@ html, body {
     display: flex;
     justify-content: center;
 }
+
 #content {
     border: 1px solid black;
+    overflow-y: auto;
 }
+
+#content::-webkit-scrollbar {
+    display: none;
+}
+
 #footer {
     height: 50px;
     border: 1px solid blue;
