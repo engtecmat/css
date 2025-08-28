@@ -52,8 +52,10 @@ html, body {
 #content {
     border: 1px solid black;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
+/* this is for previous versions of Chrome, which do not support `scrollbar-width` property*/
 #content::-webkit-scrollbar {
     display: none;
 }
