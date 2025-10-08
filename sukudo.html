@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku</title>
+</head>
+<body>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top:10px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top:10px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top:10px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+        <table style="border: 2px solid black; border-collapse: collapse; ">
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+                <td style="border: 1px solid black; width: 33px; height: 33px"></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>
